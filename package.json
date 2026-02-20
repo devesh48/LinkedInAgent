@@ -1,0 +1,24 @@
+{
+  "name": "linkedinagent",
+  "version": "1.0.0",
+  "description": "AI agent that posts daily tech & AI news to LinkedIn",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "auth": "node auth.js",
+    "run-now": "cross-env RUN_NOW=true node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/genai": "^1.42.0",
+    "axios": "^1.13.5",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1",
+    "rss-parser": "^3.13.0"
+  }
+}
