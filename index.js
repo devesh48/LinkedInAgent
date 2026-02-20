@@ -29,10 +29,12 @@ async function runAgent() {
 }
 
 if (process.env.RUN_NOW === 'true') {
-  runAgent().catch((err) => {
-    console.error('Fatal error:', err.message);
-    process.exit(1);
-  });
+  runAgent()
+    .then(() => process.exit(0))
+    .catch((err) => {
+      console.error('Fatal error:', err.message);
+      process.exit(1);
+    });
 } else {
   scheduleJob(runAgent);
 }
